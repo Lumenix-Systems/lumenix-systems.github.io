@@ -503,3 +503,10 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width: 980px){
   .aboutGrid{ grid-template-columns: 1fr; }
 }
+.subhead{
+  margin-top: 14px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
