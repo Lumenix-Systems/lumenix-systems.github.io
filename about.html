@@ -4,37 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Lumenix</title>
-  <meta name="description" content="What Lumenix is, why it exists, and what it builds." />
+  <meta name="description" content="What Lumenix is, why it exists, and how its systems work together." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <!-- Header -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="./index.html" aria-label="Lumenix home">
-        <svg class="lx" viewBox="0 0 220 140" role="img" aria-label="LX logo">
-          <defs>
-            <linearGradient id="lxg2" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="currentColor" />
-              <stop offset="45%" stop-color="#4fc3ff" />
-              <stop offset="100%" stop-color="#d26cff" />
-            </linearGradient>
-            <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="3" result="b" />
-              <feMerge>
-                <feMergeNode in="b" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-
-          <path d="M40 24 H70 V98 H120 V116 H40 Z" fill="url(#lxg2)" filter="url(#glow2)"/>
-          <path d="M140 26 L168 26 L190 58 L212 26 L240 26 L206 74 L240 118 L212 118 L190 88 L168 118 L140 118 L174 74 Z"
-                fill="url(#lxg2)" filter="url(#glow2)" transform="translate(-22,0)"/>
-          <path d="M125 30 L125 116" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
-        </svg>
-
+        <span class="footer__mark">LX</span>
         <span class="brand__text">
           <span class="brand__name">LUMENIX</span>
           <span class="brand__tag">Systems for living worlds</span>
@@ -49,6 +29,7 @@
     </div>
   </header>
 
+  <!-- Background -->
   <div class="bg">
     <div class="bg__grid"></div>
     <div class="bg__glow"></div>
@@ -56,81 +37,174 @@
   </div>
 
   <main id="main">
+    <!-- INTRO -->
     <section class="section">
       <div class="container">
         <div class="section__head">
           <h1 class="pageTitle">About Lumenix</h1>
           <p class="muted">
-            Lumenix builds a connected foundation of systems for experiences that feel real because they respond like reality does.
+            Lumenix is a systems-first technology foundation for building interactive worlds that respond
+            naturally to humans — physically, spatially, and behaviorally.
           </p>
         </div>
 
         <div class="aboutGrid">
           <article class="card">
             <div class="card__tag">What it is</div>
-            <h3>Systems-first foundation</h3>
+            <h3>A foundation, not a single product</h3>
             <p>
-              Lumenix is designed as interoperable systems — not a single product — so creators can build
-              living worlds with a consistent core across perception, space, movement, personality, and voice.
+              Lumenix is not one device, engine, or experience. It is a collection of interoperable systems
+              designed to work together — or independently — to support next-generation immersive applications.
             </p>
           </article>
 
           <article class="card">
             <div class="card__tag">Why it exists</div>
-            <h3>From “content” to “response”</h3>
+            <h3>From scripted content to responsive worlds</h3>
             <p>
-              Most experiences are pre-baked. Lumenix is about response: what you do, how you move, how you speak —
-              and how the world and characters adapt back.
+              Most digital experiences are pre-authored and reactive in shallow ways.
+              Lumenix focuses on response: how systems sense, interpret, and adapt to real human input over time.
             </p>
           </article>
 
           <article class="card">
-            <div class="card__tag">How it scales</div>
-            <h3>Modular, safe, developer-controlled</h3>
+            <div class="card__tag">Who it’s for</div>
+            <h3>Creators, developers, and builders</h3>
             <p>
-              Each subsystem can stand alone, but they become stronger together. Safety constraints and calibration are treated
-              as core design — not add-ons.
+              Lumenix is built for studios, developers, researchers, and partners who want to create
+              believable worlds, characters, and interactions — without sacrificing safety or control.
             </p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="section spacerTop">
-          <div class="container">
-            <div class="section__head">
-              <h2>What we build</h2>
-              <p class="muted">A small map of the ecosystem.</p>
-            </div>
-
-            <div class="grid">
-              <article class="card">
-                <h3>PMPE</h3>
-                <p class="muted">Perception Engine: multisensory response with safety-first control.</p>
-              </article>
-              <article class="card">
-                <h3>PSCS</h3>
-                <p class="muted">Spatial Computing: stable presence, world-locked interfaces, orchestration.</p>
-              </article>
-              <article class="card">
-                <h3>ILCS</h3>
-                <p class="muted">Locomotion Control: intent & comfort-focused movement signals.</p>
-              </article>
-              <article class="card">
-                <h3>PBES</h3>
-                <p class="muted">Personality & Behavior: consistent characters that adapt over time.</p>
-              </article>
-              <article class="card">
-                <h3>VCS</h3>
-                <p class="muted">Vocal Cognition: voice identity + contextual speech behavior.</p>
-              </article>
-              <article class="card card--cta">
-                <h3>Next</h3>
-                <p class="muted">Demos, tooling, developer docs, and controlled testing.</p>
-                <a class="btn" href="./index.html#roadmap">Roadmap</a>
-              </article>
-            </div>
-          </div>
+    <!-- SYSTEM OVERVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>The Lumenix systems</h2>
+          <p class="muted">
+            Each system is modular and purpose-built. Together, they form a coherent platform.
+          </p>
         </div>
 
+        <div class="grid">
+          <!-- PMPE -->
+          <article class="card" id="PMPE">
+            <div class="card__tag">Physical perception</div>
+            <h3>PMPE — Perception Engine</h3>
+            <p>
+              PMPE focuses on controlled multisensory perception. It is designed to safely modulate
+              sensations such as touch, temperature, and other physical feedback channels.
+            </p>
+            <ul>
+              <li>Safety-first design with strict control layers</li>
+              <li>Modular and wearable-oriented architecture</li>
+              <li>Designed for integration with game engines and simulations</li>
+            </ul>
+            <p class="muted tiny">
+              PMPE does not bypass human limits — it works within them.
+            </p>
+          </article>
+
+          <!-- PSCS -->
+          <article class="card" id="PSCS">
+            <div class="card__tag">Spatial computing</div>
+            <h3>PSCS — Spatial Computing System</h3>
+            <p>
+              PSCS handles spatial awareness, alignment, and structure.
+              It ensures that interfaces, objects, and interactions feel grounded and stable in space.
+            </p>
+            <ul>
+              <li>World-locked and context-aware interfaces</li>
+              <li>Designed for XR, simulation, and hybrid environments</li>
+              <li>Acts as a coordination layer between systems</li>
+            </ul>
+          </article>
+
+          <!-- ILCS -->
+          <article class="card" id="ILCS">
+            <div class="card__tag">Movement & intent</div>
+            <h3>ILCS — Inertial Locomotion Control System</h3>
+            <p>
+              ILCS interprets human movement and intent to enable comfortable, controlled navigation
+              through digital spaces.
+            </p>
+            <ul>
+              <li>Focus on comfort, calibration, and user safety</li>
+              <li>Supports natural movement signals</li>
+              <li>Designed to reduce disorientation and fatigue</li>
+            </ul>
+          </article>
+
+          <!-- PBES -->
+          <article class="card" id="PBES">
+            <div class="card__tag">Digital behavior</div>
+            <h3>PBES — Personality & Behavior Engine</h3>
+            <p>
+              PBES governs how digital characters think, decide, and adapt.
+              It focuses on consistency, memory, and believable behavioral change over time.
+            </p>
+            <ul>
+              <li>Emotion and decision modeling</li>
+              <li>Long-term behavioral consistency</li>
+              <li>Developer-controlled boundaries and safety frameworks</li>
+            </ul>
+          </article>
+
+          <!-- VCS -->
+          <article class="card" id="VCS">
+            <div class="card__tag">Voice & communication</div>
+            <h3>VCS — Vocal Cognition System</h3>
+            <p>
+              VCS handles voice identity, speech behavior, and contextual communication.
+              It allows characters and systems to speak in ways that reflect personality and situation.
+            </p>
+            <ul>
+              <li>Voice identity and variation</li>
+              <li>Context-aware speech behavior</li>
+              <li>Designed to integrate with PBES</li>
+            </ul>
+          </article>
+
+          <!-- Audience -->
+          <article class="card card--cta">
+            <h3>Who works with Lumenix?</h3>
+            <p>
+              Lumenix is actively shaped with input from:
+            </p>
+            <ul>
+              <li>Developers building immersive applications</li>
+              <li>Studios exploring next-generation interaction</li>
+              <li>Testers and early collaborators</li>
+              <li>Partners evaluating long-term platforms</li>
+            </ul>
+            <a class="btn" href="./index.html#contact">Get in touch</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="section section--end">
+      <div class="container">
+        <div class="contact__card">
+          <h2>Public by design</h2>
+          <p class="muted">
+            Everything presented here is intentionally public.
+            Deeper technical details, prototypes, and internal tooling are shared only through
+            direct collaboration and controlled testing.
+          </p>
+          <p class="muted">
+            If you are interested in building with, testing, or supporting Lumenix,
+            we invite you to reach out.
+          </p>
+          <div class="contact__actions">
+            <a class="btn" href="./index.html#contact">Contact</a>
+            <a class="btn btn--ghost" href="./index.html">Back to home</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
