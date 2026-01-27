@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Lumenix</title>
+  <meta name="description" content="What Lumenix is, why it exists, and what it builds." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="./index.html" aria-label="Lumenix home">
+        <svg class="lx" viewBox="0 0 220 140" role="img" aria-label="LX logo">
+          <defs>
+            <linearGradient id="lxg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="currentColor" />
+              <stop offset="45%" stop-color="#4fc3ff" />
+              <stop offset="100%" stop-color="#d26cff" />
+            </linearGradient>
+            <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="b" />
+              <feMerge>
+                <feMergeNode in="b" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <path d="M40 24 H70 V98 H120 V116 H40 Z" fill="url(#lxg2)" filter="url(#glow2)"/>
+          <path d="M140 26 L168 26 L190 58 L212 26 L240 26 L206 74 L240 118 L212 118 L190 88 L168 118 L140 118 L174 74 Z"
+                fill="url(#lxg2)" filter="url(#glow2)" transform="translate(-22,0)"/>
+          <path d="M125 30 L125 116" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+        </svg>
+
+        <span class="brand__text">
+          <span class="brand__name">LUMENIX</span>
+          <span class="brand__tag">Systems for living worlds</span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a href="./index.html#systems">Systems</a>
+        <a class="is-active" href="./about.html">About</a>
+        <a class="btn btn--ghost" href="./index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow"></div>
+    <div class="bg__stars"></div>
+  </div>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1 class="pageTitle">About Lumenix</h1>
+          <p class="muted">
+            Lumenix builds a connected foundation of systems for experiences that feel real because they respond like reality does.
+          </p>
+        </div>
+
+        <div class="aboutGrid">
+          <article class="card">
+            <div class="card__tag">What it is</div>
+            <h3>Systems-first foundation</h3>
+            <p>
+              Lumenix is designed as interoperable systems — not a single product — so creators can build
+              living worlds with a consistent core across perception, space, movement, personality, and voice.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__tag">Why it exists</div>
+            <h3>From “content” to “response”</h3>
+            <p>
+              Most experiences are pre-baked. Lumenix is about response: what you do, how you move, how you speak —
+              and how the world and characters adapt back.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__tag">How it scales</div>
+            <h3>Modular, safe, developer-controlled</h3>
+            <p>
+              Each subsystem can stand alone, but they become stronger together. Safety constraints and calibration are treated
+              as core design — not add-ons.
+            </p>
+          </article>
+        </div>
+
+        <div class="section spacerTop">
+          <div class="container">
+            <div class="section__head">
+              <h2>What we build</h2>
+              <p class="muted">A small map of the ecosystem.</p>
+            </div>
+
+            <div class="grid">
+              <article class="card">
+                <h3>PMPE</h3>
+                <p class="muted">Perception Engine: multisensory response with safety-first control.</p>
+              </article>
+              <article class="card">
+                <h3>PSCS</h3>
+                <p class="muted">Spatial Computing: stable presence, world-locked interfaces, orchestration.</p>
+              </article>
+              <article class="card">
+                <h3>ILCS</h3>
+                <p class="muted">Locomotion Control: intent & comfort-focused movement signals.</p>
+              </article>
+              <article class="card">
+                <h3>PBES</h3>
+                <p class="muted">Personality & Behavior: consistent characters that adapt over time.</p>
+              </article>
+              <article class="card">
+                <h3>VCS</h3>
+                <p class="muted">Vocal Cognition: voice identity + contextual speech behavior.</p>
+              </article>
+              <article class="card card--cta">
+                <h3>Next</h3>
+                <p class="muted">Demos, tooling, developer docs, and controlled testing.</p>
+                <a class="btn" href="./index.html#roadmap">Roadmap</a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__mark">LX</div>
+        <div class="footer__meta">
+          <div class="footer__name">Lumenix</div>
+          <div class="tiny muted">Systems for living worlds</div>
+        </div>
+      </div>
+      <div class="footer__right tiny muted">
+        Built on GitHub Pages
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
