@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Lumenix</title>
-  <meta name="description" content="What Lumenix is, why it exists, and how its systems work together." />
+  <meta name="description" content="Lumenix is a systems-first foundation for building responsive, living digital worlds." />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -13,14 +13,13 @@
   <!-- Header -->
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="./index.html" aria-label="Lumenix home">
+      <a class="brand" href="./index.html">
         <span class="footer__mark">LX</span>
         <span class="brand__text">
           <span class="brand__name">LUMENIX</span>
           <span class="brand__tag">Systems for living worlds</span>
         </span>
       </a>
-
       <nav class="nav">
         <a href="./index.html#systems">Systems</a>
         <a class="is-active" href="./about.html">About</a>
@@ -37,176 +36,224 @@
   </div>
 
   <main id="main">
+
     <!-- INTRO -->
     <section class="section">
       <div class="container">
-        <div class="section__head">
-          <h1 class="pageTitle">About Lumenix</h1>
-          <p class="muted">
-            Lumenix is a systems-first technology foundation for building interactive worlds that respond
-            naturally to humans — physically, spatially, and behaviorally.
-          </p>
-        </div>
+        <h1 class="pageTitle">About Lumenix</h1>
+        <p class="lead muted">
+          Lumenix is a systems-first technology foundation designed to support the next generation of
+          interactive, immersive, and responsive digital worlds.
+        </p>
+        <p class="muted">
+          Rather than building a single product or experience, Lumenix focuses on the underlying
+          systems that make believable interaction possible — across perception, space, movement,
+          personality, and voice.
+        </p>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="section">
+      <div class="container">
+        <h2>Design philosophy</h2>
 
         <div class="aboutGrid">
           <article class="card">
-            <div class="card__tag">What it is</div>
-            <h3>A foundation, not a single product</h3>
+            <h3>Systems before content</h3>
             <p>
-              Lumenix is not one device, engine, or experience. It is a collection of interoperable systems
-              designed to work together — or independently — to support next-generation immersive applications.
+              Lumenix is built on the belief that long-term progress comes from robust systems,
+              not handcrafted content alone. Content can be authored endlessly, but without
+              underlying structure it remains shallow and static.
+            </p>
+            <p>
+              By focusing on systems, Lumenix enables experiences that can evolve, respond,
+              and remain consistent over time — even as content changes.
             </p>
           </article>
 
           <article class="card">
-            <div class="card__tag">Why it exists</div>
-            <h3>From scripted content to responsive worlds</h3>
+            <h3>Response over illusion</h3>
             <p>
-              Most digital experiences are pre-authored and reactive in shallow ways.
-              Lumenix focuses on response: how systems sense, interpret, and adapt to real human input over time.
+              Many immersive experiences aim to trick the senses.
+              Lumenix instead focuses on response — how systems sense input, interpret intent,
+              and adapt output in ways that feel coherent and grounded.
+            </p>
+            <p>
+              This applies equally to physical feedback, spatial presence, character behavior,
+              and voice interaction.
             </p>
           </article>
 
           <article class="card">
-            <div class="card__tag">Who it’s for</div>
-            <h3>Creators, developers, and builders</h3>
+            <h3>Safety as a core constraint</h3>
             <p>
-              Lumenix is built for studios, developers, researchers, and partners who want to create
-              believable worlds, characters, and interactions — without sacrificing safety or control.
+              Safety is not treated as a post-process or optional layer.
+              All Lumenix systems are designed with explicit boundaries, calibration,
+              and developer control from the beginning.
+            </p>
+            <p class="muted tiny">
+              The goal is not maximum stimulation, but controlled, repeatable, and responsible interaction.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SYSTEM OVERVIEW -->
+    <!-- SYSTEMS DEEP DIVE -->
     <section class="section">
       <div class="container">
-        <div class="section__head">
-          <h2>The Lumenix systems</h2>
-          <p class="muted">
-            Each system is modular and purpose-built. Together, they form a coherent platform.
+        <h2>The Lumenix system architecture</h2>
+        <p class="muted">
+          Each system below is modular and independently usable, but designed to interoperate
+          through clear interfaces and shared principles.
+        </p>
+
+        <!-- PMPE -->
+        <article class="card spacerTop" id="PMPE">
+          <h3>PMPE — Personalized Multisensory Perception Engine</h3>
+          <p>
+            PMPE handles controlled modulation of physical perception. Its purpose is not to overwhelm
+            the senses, but to subtly influence how experiences are perceived through safe,
+            bounded feedback channels.
           </p>
-        </div>
+          <p>
+            The system is built around strict safety constraints, user calibration,
+            and hardware abstraction. PMPE is designed to be wearable-compatible and
+            modular, allowing individual axes of perception to be enabled or disabled
+            depending on context.
+          </p>
+          <ul>
+            <li>Safety-first modulation and calibration</li>
+            <li>Hardware-agnostic architecture</li>
+            <li>Designed for simulation, training, and immersive experiences</li>
+          </ul>
+        </article>
 
-        <div class="grid">
-          <!-- PMPE -->
-          <article class="card" id="PMPE">
-            <div class="card__tag">Physical perception</div>
-            <h3>PMPE — Perception Engine</h3>
-            <p>
-              PMPE focuses on controlled multisensory perception. It is designed to safely modulate
-              sensations such as touch, temperature, and other physical feedback channels.
-            </p>
-            <ul>
-              <li>Safety-first design with strict control layers</li>
-              <li>Modular and wearable-oriented architecture</li>
-              <li>Designed for integration with game engines and simulations</li>
-            </ul>
-            <p class="muted tiny">
-              PMPE does not bypass human limits — it works within them.
-            </p>
-          </article>
+        <!-- PSCS -->
+        <article class="card spacerTop" id="PSCS">
+          <h3>PSCS — Personalized Spatial Computing System</h3>
+          <p>
+            PSCS is responsible for spatial coherence. It ensures that digital objects,
+            interfaces, and interactions are anchored meaningfully within space,
+            reducing disorientation and increasing presence.
+          </p>
+          <p>
+            Rather than acting as a monolithic engine, PSCS operates as a coordination
+            layer that integrates spatial data, user context, and system outputs.
+          </p>
+          <ul>
+            <li>World-locked and context-aware spatial logic</li>
+            <li>XR and simulation focused design</li>
+            <li>Inter-system coordination</li>
+          </ul>
+        </article>
 
-          <!-- PSCS -->
-          <article class="card" id="PSCS">
-            <div class="card__tag">Spatial computing</div>
-            <h3>PSCS — Spatial Computing System</h3>
-            <p>
-              PSCS handles spatial awareness, alignment, and structure.
-              It ensures that interfaces, objects, and interactions feel grounded and stable in space.
-            </p>
-            <ul>
-              <li>World-locked and context-aware interfaces</li>
-              <li>Designed for XR, simulation, and hybrid environments</li>
-              <li>Acts as a coordination layer between systems</li>
-            </ul>
-          </article>
+        <!-- ILCS -->
+        <article class="card spacerTop" id="ILCS">
+          <h3>ILCS — Inertial Locomotion Control System</h3>
+          <p>
+            ILCS interprets human movement, balance, and intent to enable controlled navigation
+            through digital spaces. It is designed to minimize discomfort while maintaining
+            expressive movement input.
+          </p>
+          <p>
+            Calibration, safety limits, and adaptability are central to ILCS,
+            making it suitable for long-duration use and varied user profiles.
+          </p>
+          <ul>
+            <li>Comfort-oriented locomotion modeling</li>
+            <li>Intent interpretation rather than raw input</li>
+            <li>Explicit safety and fallback mechanisms</li>
+          </ul>
+        </article>
 
-          <!-- ILCS -->
-          <article class="card" id="ILCS">
-            <div class="card__tag">Movement & intent</div>
-            <h3>ILCS — Inertial Locomotion Control System</h3>
-            <p>
-              ILCS interprets human movement and intent to enable comfortable, controlled navigation
-              through digital spaces.
-            </p>
-            <ul>
-              <li>Focus on comfort, calibration, and user safety</li>
-              <li>Supports natural movement signals</li>
-              <li>Designed to reduce disorientation and fatigue</li>
-            </ul>
-          </article>
+        <!-- PBES -->
+        <article class="card spacerTop" id="PBES">
+          <h3>PBES — Personality & Behavior Engine System</h3>
+          <p>
+            PBES governs how digital entities behave over time.
+            It focuses on consistency, memory, emotional modeling,
+            and decision-making rather than scripted reactions.
+          </p>
+          <p>
+            PBES is designed to give developers control over behavior boundaries
+            while allowing characters to adapt naturally within those limits.
+          </p>
+          <ul>
+            <li>Emotion and decision modeling</li>
+            <li>Long-term behavioral consistency</li>
+            <li>Safety frameworks and developer oversight</li>
+          </ul>
+        </article>
 
-          <!-- PBES -->
-          <article class="card" id="PBES">
-            <div class="card__tag">Digital behavior</div>
-            <h3>PBES — Personality & Behavior Engine</h3>
-            <p>
-              PBES governs how digital characters think, decide, and adapt.
-              It focuses on consistency, memory, and believable behavioral change over time.
-            </p>
-            <ul>
-              <li>Emotion and decision modeling</li>
-              <li>Long-term behavioral consistency</li>
-              <li>Developer-controlled boundaries and safety frameworks</li>
-            </ul>
-          </article>
-
-          <!-- VCS -->
-          <article class="card" id="VCS">
-            <div class="card__tag">Voice & communication</div>
-            <h3>VCS — Vocal Cognition System</h3>
-            <p>
-              VCS handles voice identity, speech behavior, and contextual communication.
-              It allows characters and systems to speak in ways that reflect personality and situation.
-            </p>
-            <ul>
-              <li>Voice identity and variation</li>
-              <li>Context-aware speech behavior</li>
-              <li>Designed to integrate with PBES</li>
-            </ul>
-          </article>
-
-          <!-- Audience -->
-          <article class="card card--cta">
-            <h3>Who works with Lumenix?</h3>
-            <p>
-              Lumenix is actively shaped with input from:
-            </p>
-            <ul>
-              <li>Developers building immersive applications</li>
-              <li>Studios exploring next-generation interaction</li>
-              <li>Testers and early collaborators</li>
-              <li>Partners evaluating long-term platforms</li>
-            </ul>
-            <a class="btn" href="./index.html#contact">Get in touch</a>
-          </article>
-        </div>
+        <!-- VCS -->
+        <article class="card spacerTop" id="VCS">
+          <h3>VCS — Vocal Cognition System</h3>
+          <p>
+            VCS manages voice identity, speech behavior, and contextual expression.
+            It enables spoken interaction that reflects personality, emotional state,
+            and situational awareness.
+          </p>
+          <p>
+            VCS is designed to integrate tightly with PBES while remaining usable
+            as a standalone communication layer.
+          </p>
+          <ul>
+            <li>Voice identity and variation</li>
+            <li>Context-aware speech behavior</li>
+            <li>Designed for interactive dialogue systems</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <!-- CLOSING -->
+    <!-- AUDIENCES -->
     <section class="section section--end">
       <div class="container">
-        <div class="contact__card">
-          <h2>Public by design</h2>
+        <h2>Working with Lumenix</h2>
+
+        <div class="aboutGrid">
+          <article class="card">
+            <h3>For developers</h3>
+            <p>
+              Lumenix provides structured systems with clear boundaries.
+              It is designed to integrate with existing engines and pipelines,
+              not replace them.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>For partners & investors</h3>
+            <p>
+              Lumenix represents a long-term platform approach.
+              Development prioritizes architectural integrity,
+              safety, and scalability over short-term spectacle.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>For testers & collaborators</h3>
+            <p>
+              Early testing and collaboration are essential to shaping the systems.
+              Public documentation describes intent; deeper access is shared through
+              direct collaboration.
+            </p>
+          </article>
+        </div>
+
+        <div class="contact__card spacerTop">
+          <h3>Public by design</h3>
           <p class="muted">
-            Everything presented here is intentionally public.
-            Deeper technical details, prototypes, and internal tooling are shared only through
-            direct collaboration and controlled testing.
+            Everything on this page is intentionally public.
+            Internal tooling, prototypes, and detailed implementations
+            are shared selectively with collaborators and testers.
           </p>
-          <p class="muted">
-            If you are interested in building with, testing, or supporting Lumenix,
-            we invite you to reach out.
-          </p>
-          <div class="contact__actions">
-            <a class="btn" href="./index.html#contact">Contact</a>
-            <a class="btn btn--ghost" href="./index.html">Back to home</a>
-          </div>
+          <a class="btn" href="./index.html#contact">Get in touch</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
