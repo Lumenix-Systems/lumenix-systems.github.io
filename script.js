@@ -49,3 +49,14 @@ document.querySelectorAll(".node").forEach(btn => {
 document.querySelectorAll(".stack__node").forEach(btn => {
   btn.addEventListener("click", () => setActive(btn.dataset.focus));
 });
+// Smooth anchor scrolling (no motion if user prefers reduced motion)
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", (e) => {
+    const id = a.getAttribute("href");
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  });
+});
