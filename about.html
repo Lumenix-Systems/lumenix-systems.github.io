@@ -129,6 +129,25 @@
             <li>Designed for simulation, training, and immersive experiences</li>
           </ul>
         </article>
+        <h4 class="subhead">Subsystems (overview)</h4>
+<p class="muted">
+  PMPE is composed of multiple perception-focused subsystems, each responsible for a specific
+  modulation axis. These subsystems can operate independently or in coordinated patterns.
+</p>
+<ul>
+  <li><strong>PMPE-HM (Haptic Modulation):</strong> Controlled vibration and tactile feedback designed
+      to reinforce contact, impact, and environmental texture.</li>
+  <li><strong>PMPE-TM (Thermal Modulation):</strong> Safe temperature variation used to influence
+      perceived warmth, cold, and environmental conditions.</li>
+  <li><strong>PMPE-OP (Olfactory Perception):</strong> Scent-based cues using constrained, non-hazardous
+      delivery methods to support environmental context.</li>
+  <li><strong>PMPE-GM (Gustatory Modulation):</strong> Experimental taste-related perception support,
+      explored cautiously and always within strict safety boundaries.</li>
+</ul>
+<p class="muted tiny">
+  Each subsystem is gated by calibration, user tolerance, and system-level safety rules.
+</p>
+
 
         <!-- PSCS -->
         <article class="card spacerTop" id="PSCS">
@@ -148,6 +167,27 @@
             <li>Inter-system coordination</li>
           </ul>
         </article>
+        <h4 class="subhead">Subsystems (overview)</h4>
+<p class="muted">
+  PSCS is structured as a spatial coordination layer rather than a single monolithic engine.
+  Its subsystems handle different aspects of spatial understanding and presentation.
+</p>
+<ul>
+  <li><strong>PSCS-VI (Visual Integration):</strong> Manages how visual elements are anchored,
+      layered, and aligned within space.</li>
+  <li><strong>PSCS-AU (Spatial Audio):</strong> Handles sound positioning, directionality,
+      and environmental audio context.</li>
+  <li><strong>PSCS-MC (Motion Context):</strong> Interprets user movement and orientation to
+      maintain spatial stability.</li>
+  <li><strong>PSCS-ER (Environment Representation):</strong> Maintains a consistent spatial
+      model of the world and its dynamic elements.</li>
+  <li><strong>PSCS-PC (Processing Core):</strong> Coordinates spatial data flow between PSCS
+      and other Lumenix systems.</li>
+</ul>
+<p class="muted tiny">
+  PSCS does not replace existing engines — it augments them with spatial coherence logic.
+</p>
+
 
         <!-- ILCS -->
         <article class="card spacerTop" id="ILCS">
@@ -167,6 +207,25 @@
             <li>Explicit safety and fallback mechanisms</li>
           </ul>
         </article>
+        <h4 class="subhead">Subsystems (overview)</h4>
+<p class="muted">
+  ILCS separates raw movement input from interpreted intent, allowing locomotion to remain
+  expressive without sacrificing comfort or safety.
+</p>
+<ul>
+  <li><strong>ILCS-GAM (Gait & Acceleration Modeling):</strong> Interprets walking, running,
+      and acceleration patterns.</li>
+  <li><strong>ILCS-BSM (Balance & Stability Monitoring):</strong> Continuously evaluates
+      balance to prevent disorientation or unsafe movement.</li>
+  <li><strong>ILCS-MPCC (Motion Prediction & Correction):</strong> Anticipates user intent
+      and smooths transitions.</li>
+  <li><strong>ILCS-SCF (Safety & Constraint Framework):</strong> Enforces movement limits,
+      fallbacks, and emergency stops.</li>
+</ul>
+<p class="muted tiny">
+  Locomotion behavior is always bounded by explicit safety constraints.
+</p>
+
 
         <!-- PBES -->
         <article class="card spacerTop" id="PBES">
@@ -186,6 +245,25 @@
             <li>Safety frameworks and developer oversight</li>
           </ul>
         </article>
+        <h4 class="subhead">Subsystems (overview)</h4>
+<p class="muted">
+  PBES is divided into layered cognitive and behavioral components, allowing characters
+  to remain consistent while still adapting over time.
+</p>
+<ul>
+  <li><strong>PBES-PC (Personality Core):</strong> Defines stable personality traits
+      and baseline tendencies.</li>
+  <li><strong>PBES-EM (Emotional Model):</strong> Tracks emotional state and transitions.</li>
+  <li><strong>PBES-DM (Decision Model):</strong> Governs how choices are evaluated and selected.</li>
+  <li><strong>PBES-SA (Simulation & Adaptation):</strong> Allows behavior to evolve based
+      on past interactions.</li>
+  <li><strong>PBES-EX (Expression Layer):</strong> Maps internal state to visible behavior.</li>
+  <li><strong>PBES-SF (Safety Framework):</strong> Ensures behavior remains within defined limits.</li>
+</ul>
+<p class="muted tiny">
+  Developers control boundaries; PBES handles consistency within them.
+</p>
+
 
         <!-- VCS -->
         <article class="card spacerTop" id="VCS">
@@ -207,6 +285,23 @@
         </article>
       </div>
     </section>
+    <h4 class="subhead">Subsystems (overview)</h4>
+<p class="muted">
+  VCS separates voice identity, speech generation, and contextual control to avoid
+  one-size-fits-all vocal behavior.
+</p>
+<ul>
+  <li><strong>VCS-ID (Voice Identity):</strong> Defines vocal characteristics and variation.</li>
+  <li><strong>VCS-ASR (Speech Recognition):</strong> Interprets spoken input and extracts intent.</li>
+  <li><strong>VCS-CM (Context Model):</strong> Adjusts speech based on situation, audience,
+      and emotional state.</li>
+  <li><strong>VCS-SG (Speech Generation):</strong> Produces spoken output aligned with identity
+      and context.</li>
+</ul>
+<p class="muted tiny">
+  VCS can operate standalone or integrate tightly with PBES for character-driven speech.
+</p>
+
 
     <!-- AUDIENCES -->
     <section class="section section--end">
