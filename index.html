@@ -2,13 +2,353 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Lumenix</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumenix — Systems for living worlds</title>
+  <meta name="description" content="Lumenix builds next-generation immersive systems: perception, spatial computing, locomotion, personality, and voice." />
+
+  <!-- Social preview (optional) -->
+  <meta property="og:title" content="Lumenix" />
+  <meta property="og:description" content="Systems for living worlds." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <main class="hero">
-    <h1>LUMENIX</h1>
-    <p>Systems for living worlds.</p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Lumenix home">
+        <!-- Inline LX logo (SVG) -->
+        <svg class="lx" viewBox="0 0 220 140" role="img" aria-label="LX logo">
+          <defs>
+            <linearGradient id="lxg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="currentColor" />
+              <stop offset="45%" stop-color="#4fc3ff" />
+              <stop offset="100%" stop-color="#d26cff" />
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="b" />
+              <feMerge>
+                <feMergeNode in="b" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- L -->
+          <path d="M40 24 H70 V98 H120 V116 H40 Z" fill="url(#lxg)" filter="url(#glow)"/>
+          <!-- X -->
+          <path d="M140 26 L168 26 L190 58 L212 26 L240 26 L206 74 L240 118 L212 118 L190 88 L168 118 L140 118 L174 74 Z"
+                fill="url(#lxg)" filter="url(#glow)" transform="translate(-22,0)"/>
+          <!-- subtle cut line -->
+          <path d="M125 30 L125 116" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+        </svg>
+
+        <span class="brand__text">
+          <span class="brand__name">LUMENIX</span>
+          <span class="brand__tag">Systems for living worlds</span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a href="#systems">Systems</a>
+        <a href="#connect">How it connects</a>
+        <a href="#roadmap">Roadmap</a>
+        <a class="btn btn--ghost" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="top" class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow"></div>
+    <div class="bg__stars"></div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="pill">
+            <span class="dot"></span>
+            Next-gen immersive systems
+          </p>
+
+          <h1>
+            Build worlds that
+            <span class="grad">respond</span>.
+          </h1>
+
+          <p class="lead">
+            Lumenix is a foundation of connected systems — perception, spatial computing, locomotion,
+            personality, and voice — designed to make digital experiences feel alive.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#systems">Explore systems</a>
+            <a class="btn btn--ghost" href="#demo">Watch the vision</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="stat">
+              <div class="stat__v">PMPE · PSCS · ILCS</div>
+              <div class="stat__k">Physical immersion layer</div>
+            </div>
+            <div class="stat">
+              <div class="stat__v">PBES · VCS</div>
+              <div class="stat__k">Digital life layer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel">
+          <div class="panel">
+            <div class="panel__top">
+              <div class="panel__title">Lumenix System Stack</div>
+              <div class="panel__chip">Live concept</div>
+            </div>
+
+            <div class="stack">
+              <button class="stack__node" data-focus="PMPE">
+                <span class="stack__name">PMPE</span>
+                <span class="stack__desc">Perception Engine</span>
+              </button>
+              <button class="stack__node" data-focus="PSCS">
+                <span class="stack__name">PSCS</span>
+                <span class="stack__desc">Spatial Computing</span>
+              </button>
+              <button class="stack__node" data-focus="ILCS">
+                <span class="stack__name">ILCS</span>
+                <span class="stack__desc">Locomotion Control</span>
+              </button>
+
+              <div class="stack__line"></div>
+
+              <button class="stack__node" data-focus="PBES">
+                <span class="stack__name">PBES</span>
+                <span class="stack__desc">Personality & Behavior</span>
+              </button>
+              <button class="stack__node" data-focus="VCS">
+                <span class="stack__name">VCS</span>
+                <span class="stack__desc">Vocal Cognition</span>
+              </button>
+            </div>
+
+            <div class="panel__hint">
+              Tip: click a system — the map below will highlight it.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO (placeholder for your future animation) -->
+    <section id="demo" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Experience the vision</h2>
+          <p class="muted">
+            A first-person explanation of Lumenix — designed like an interactive VR moment.
+            (This block is ready for a video later.)
+          </p>
+        </div>
+
+        <div class="video">
+          <div class="video__frame">
+            <div class="video__badge">Video slot</div>
+            <div class="video__play" aria-hidden="true">▶</div>
+            <div class="video__text">
+              Drop your trailer / animation here when you’re ready.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEMS -->
+    <section id="systems" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>The systems</h2>
+          <p class="muted">Each module is powerful on its own — together, they feel like a living platform.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card" id="PMPE">
+            <div class="card__tag">Physical</div>
+            <h3>PMPE</h3>
+            <p>Perception Engine that shapes sensation — touch, temperature, and multisensory response.</p>
+            <ul>
+              <li>Safety-first modulation</li>
+              <li>Wearable-friendly modules</li>
+              <li>Game engine integration</li>
+            </ul>
+          </article>
+
+          <article class="card" id="PSCS">
+            <div class="card__tag">Physical</div>
+            <h3>PSCS</h3>
+            <p>Spatial Computing System that anchors UI and worlds with stable, believable presence.</p>
+            <ul>
+              <li>World-locked interfaces</li>
+              <li>XR-ready pipeline</li>
+              <li>System-to-system orchestration</li>
+            </ul>
+          </article>
+
+          <article class="card" id="ILCS">
+            <div class="card__tag">Physical</div>
+            <h3>ILCS</h3>
+            <p>Locomotion Control for natural movement signals — designed for comfort and control.</p>
+            <ul>
+              <li>Balance & intent modeling</li>
+              <li>Low-latency response</li>
+              <li>Safety and calibration layers</li>
+            </ul>
+          </article>
+
+          <article class="card" id="PBES">
+            <div class="card__tag">Digital life</div>
+            <h3>PBES</h3>
+            <p>Personality & Behavior Engine that turns NPCs into consistent, adaptive beings.</p>
+            <ul>
+              <li>Emotion + decision layers</li>
+              <li>Memory & adaptation paths</li>
+              <li>Developer-controlled safety</li>
+            </ul>
+          </article>
+
+          <article class="card" id="VCS">
+            <div class="card__tag">Digital life</div>
+            <h3>VCS</h3>
+            <p>Vocal Cognition System for identity, speech behavior, and contextual voice response.</p>
+            <ul>
+              <li>Voice identity system</li>
+              <li>Context-aware responses</li>
+              <li>Integrates with PBES</li>
+            </ul>
+          </article>
+
+          <article class="card card--cta">
+            <h3>Build with Lumenix</h3>
+            <p>Want early access, collaboration, or to help test prototypes?</p>
+            <a class="btn" href="#contact">Request contact</a>
+            <a class="btn btn--ghost" href="#roadmap">See roadmap</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT CONNECTS -->
+    <section id="connect" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>How it connects</h2>
+          <p class="muted">Hover or tap systems to see how the layers reinforce each other.</p>
+        </div>
+
+        <div class="map" role="region" aria-label="Lumenix system connection map">
+          <div class="map__layer">
+            <div class="map__title">Physical immersion</div>
+            <div class="map__nodes">
+              <button class="node" data-node="PMPE">PMPE</button>
+              <button class="node" data-node="PSCS">PSCS</button>
+              <button class="node" data-node="ILCS">ILCS</button>
+            </div>
+          </div>
+
+          <div class="map__bridge" aria-hidden="true">
+            <div class="beam"></div>
+            <div class="beam beam--2"></div>
+          </div>
+
+          <div class="map__layer">
+            <div class="map__title">Digital life</div>
+            <div class="map__nodes">
+              <button class="node" data-node="PBES">PBES</button>
+              <button class="node" data-node="VCS">VCS</button>
+            </div>
+          </div>
+
+          <div class="map__detail" id="mapDetail">
+            <div class="map__detailTitle">Select a system</div>
+            <div class="map__detailText">
+              Click a system card above, or tap a node here to highlight its role in the stack.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Roadmap</h2>
+          <p class="muted">No dates — just forward motion.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="step">
+            <div class="step__k">Now</div>
+            <div class="step__v">Core identity · public presence · system framing</div>
+          </div>
+          <div class="step">
+            <div class="step__k">Next</div>
+            <div class="step__v">Prototype demos · engine integration · creator tooling</div>
+          </div>
+          <div class="step">
+            <div class="step__k">Then</div>
+            <div class="step__v">Developer kits · controlled testing · safety validation</div>
+          </div>
+          <div class="step">
+            <div class="step__k">Future</div>
+            <div class="step__v">Scaled production readiness · ecosystem partnerships</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--end">
+      <div class="container contact">
+        <div class="contact__card">
+          <h2>Contact</h2>
+          <p class="muted">
+            Want to collaborate, build on the platform, or follow development updates?
+          </p>
+
+          <div class="contact__actions">
+            <a class="btn" href="mailto:hello@lumenix.example?subject=Lumenix%20—%20Hello">Email us</a>
+            <a class="btn btn--ghost" href="#systems">Explore systems</a>
+          </div>
+
+          <p class="tiny muted">
+            Tip: replace the email link with your real address when ready.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__mark">LX</div>
+        <div class="footer__meta">
+          <div class="footer__name">Lumenix</div>
+          <div class="tiny muted">Systems for living worlds</div>
+        </div>
+      </div>
+
+      <div class="footer__right tiny muted">
+        © <span id="year"></span> Lumenix · Built on GitHub Pages
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
