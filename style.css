@@ -522,7 +522,7 @@ a{ color:inherit; text-decoration:none; }
     radial-gradient(circle at 70% 60%, rgba(210,108,255,0.14), transparent 55%),
     rgba(7,8,12,0.98);
   backdrop-filter: blur(10px);
-  transition: opacity 700ms ease, visibility 700ms ease;
+  transition: opacity 1500ms ease, visibility 1500ms ease;
 }
 
 .boot__inner{
