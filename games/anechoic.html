@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Codename — Lumenix Games</title>
-  <meta name="description" content="Project Codename — a Lumenix game in development." />
+  <title>Anechoic — Lumenix Games</title>
+  <meta name="description" content="Anechoic — a horror story looping experience in prototype." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -39,27 +39,29 @@
     <section class="section">
       <div class="container">
 
+        <!-- HERO -->
         <div class="gameHero">
           <div class="gameHero__left">
             <div class="breadcrumbs tiny muted">
-              <a href="../games.html">Games</a> <span class="muted">/</span> Project Codename
+              <a href="../games.html">Games</a> <span class="muted">/</span> Anechoic
             </div>
 
-            <h1 class="pageTitle">Project Codename</h1>
+            <h1 class="pageTitle">Anechoic</h1>
 
             <div class="gameBadges">
-              <span class="chip">Horror · Co-op</span>
-              <span class="badge">In development</span>
-              <span class="chip">Status: Prototype</span>
+              <span class="chip">Horror · Story · Looping</span>
+              <span class="badge">Prototype</span>
+              <span class="chip">Progress: 65%</span>
             </div>
 
             <p class="muted">
-              A short, high-tension co-op experience where fear adapts to the group — and the safest way out
-              isn’t always the fastest.
+              As your friend offers you to try their new system, you gladly say yes.
+              But when the chamber doesn’t go as planned, you’re forced to find a way out.
+              Can you trust your senses — and can you get help in time?
             </p>
 
             <div class="gameCTAs">
-              <a class="btn" href="#trailer">Watch trailer</a>
+              <a class="btn" href="#trailer">Trailer</a>
               <a class="btn btn--ghost" href="#progress">Progress</a>
             </div>
           </div>
@@ -74,11 +76,11 @@
           </div>
         </div>
 
-        <!-- Trailer -->
+        <!-- TRAILER -->
         <section id="trailer" class="section">
           <div class="section__head">
             <h2>Trailer</h2>
-            <p class="muted">Embed a YouTube/Vimeo link later, or swap this for an MP4.</p>
+            <p class="muted">Not published yet. This slot is ready when you have a video.</p>
           </div>
 
           <div class="video__frame">
@@ -86,13 +88,25 @@
             <div class="video__play" aria-hidden="true">▶</div>
             <div class="video__text">Coming soon</div>
           </div>
+
+          <!-- When you have a YouTube trailer, replace the block above with:
+          <iframe
+            width="100%" height="360"
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Anechoic trailer"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="border-radius:22px; border:1px solid rgba(255,255,255,0.10);">
+          </iframe>
+          -->
         </section>
 
-        <!-- Gallery -->
+        <!-- GALLERY -->
         <section class="section">
           <div class="section__head">
             <h2>Gallery</h2>
-            <p class="muted">Screenshots, concept art, mood frames.</p>
+            <p class="muted">Screenshots and mood frames will live here.</p>
           </div>
 
           <div class="gallery">
@@ -103,44 +117,75 @@
           </div>
         </section>
 
-        <!-- Overview -->
+        <!-- WHAT IT IS -->
         <section class="section">
           <div class="section__head">
             <h2>What it is</h2>
+            <p class="muted">A horror experience built around perception, silence, and repeating patterns.</p>
           </div>
 
           <div class="twoCol">
             <article class="card">
               <h3>Core concept</h3>
               <p class="muted">
-                Players face personalized fear instances: either push through to escape faster, or endure longer while the threat approaches.
+                You enter an anechoic chamber as a “test subject” for a new system. The environment begins to
+                distort in ways that make silence feel active — like it’s pushing back. You must navigate a looping
+                structure, interpret what’s real, and find a way out.
               </p>
               <ul>
-                <li>Co-op tension and shared consequences</li>
-                <li>Replayable sessions through variation</li>
-                <li>Focus on atmosphere and pacing</li>
+                <li>Story-driven horror with a looping progression</li>
+                <li>Sensory uncertainty: what you perceive may be wrong</li>
+                <li>Escape-focused pacing with rising pressure</li>
               </ul>
             </article>
 
             <article class="card">
-              <h3>Built to prove systems</h3>
+              <h3>Core loop (simple)</h3>
               <p class="muted">
-                This project exists to stress-test Lumenix systems in real production — especially behavior, voice, and immersion.
+                This is the repeating “game rhythm” the player experiences:
               </p>
               <ul>
-                <li>PBES: adaptive NPC behavior (controlled)</li>
-                <li>VCS: contextual vocal responses</li>
-                <li>Optional: PMPE/PSCS integrations later</li>
+                <li>Enter / wake inside the chamber</li>
+                <li>Explore and test what rules are currently “true”</li>
+                <li>Stay quiet (or manage sound) to avoid escalation</li>
+                <li>Find clues or a route that breaks the loop</li>
+                <li>Attempt escape → loop shifts → try again with new understanding</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Pillars (what makes it unique)</h3>
+              <p class="muted">
+                Pillars are the few big promises the game keeps delivering on.
+              </p>
+              <ul>
+                <li><strong>Silence as gameplay:</strong> quiet isn’t just atmosphere — it’s a mechanic and a threat.</li>
+                <li><strong>Perception pressure:</strong> you’re never fully sure if your senses are helping or lying.</li>
+                <li><strong>Looping discovery:</strong> each loop teaches something new, not just “restart and repeat.”</li>
+                <li><strong>Escalation:</strong> the longer you’re trapped, the more the chamber asserts itself.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Lumenix relationship (public-safe)</h3>
+              <p class="muted">
+                Anechoic is built as a real-world proving ground for Lumenix-level thinking: clean systems,
+                believable feedback, and controlled escalation — without needing special hardware to be playable.
+              </p>
+              <ul>
+                <li>Playable as a standard game first</li>
+                <li>Leaves room for deeper integration later (optional)</li>
+                <li>Focus on clarity, safety, and controlled intensity</li>
               </ul>
             </article>
           </div>
         </section>
 
-        <!-- Progress -->
+        <!-- PROGRESS -->
         <section id="progress" class="section section--end">
           <div class="section__head">
             <h2>Status & progress</h2>
-            <p class="muted">A public snapshot. More detail available to collaborators/testers.</p>
+            <p class="muted">A public snapshot. Deeper details are available through collaboration/testing.</p>
           </div>
 
           <div class="progressWrap">
@@ -148,31 +193,33 @@
               <div class="progressTop">
                 <div>
                   <div class="tiny muted">Overall progress</div>
-                  <div class="progressValue">27%</div>
+                  <div class="progressValue">65%</div>
                 </div>
                 <div class="chip">Prototype</div>
               </div>
 
               <div class="progressBar" aria-label="progress bar">
-                <div class="progressBar__fill" style="width:27%"></div>
+                <div class="progressBar__fill" style="width:65%"></div>
               </div>
 
               <div class="milestones">
-                <div class="mile done"><span></span> Core loop validated</div>
-                <div class="mile done"><span></span> First fear instance blockout</div>
-                <div class="mile"><span></span> AI behavior pass</div>
-                <div class="mile"><span></span> Content pass + polish</div>
-                <div class="mile"><span></span> Closed testing</div>
+                <div class="mile done"><span></span> Core concept & loop established</div>
+                <div class="mile done"><span></span> Prototype chamber flow working</div>
+                <div class="mile"><span></span> Hardware upgrade integrated (to finalize)</div>
+                <div class="mile"><span></span> Voice lines recorded</div>
+                <div class="mile"><span></span> Mocap / performance capture pass</div>
+                <div class="mile"><span></span> Detail work + full playtest cycle</div>
+                <div class="mile"><span></span> Release preparation</div>
               </div>
             </div>
 
             <div class="card">
-              <h3>Public timeline (no dates)</h3>
+              <h3>Roadmap (no dates)</h3>
               <div class="timeline">
-                <div class="step"><div class="step__k">Now</div><div class="step__v">Prototype iteration + system testing</div></div>
-                <div class="step"><div class="step__k">Next</div><div class="step__v">Vertical slice + trailer update</div></div>
-                <div class="step"><div class="step__k">Then</div><div class="step__v">Closed testing with feedback loops</div></div>
-                <div class="step"><div class="step__k">Later</div><div class="step__v">Public release planning</div></div>
+                <div class="step"><div class="step__k">Now</div><div class="step__v">Upgrade hardware to finish the experience</div></div>
+                <div class="step"><div class="step__k">Next</div><div class="step__v">Record voice lines and mocap/performance</div></div>
+                <div class="step"><div class="step__k">Then</div><div class="step__v">Detail work + playtesting + iteration</div></div>
+                <div class="step"><div class="step__k">Later</div><div class="step__v">Release</div></div>
               </div>
 
               <div class="contact__actions" style="margin-top:12px;">
@@ -205,4 +252,3 @@
   <script src="../script.js"></script>
 </body>
 </html>
-
