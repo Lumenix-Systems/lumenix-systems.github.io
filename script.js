@@ -60,3 +60,50 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
   });
 });
+// Boot intro: logo -> site
+(function () {
+  const boot = document.getElementById("lxBoot");
+  const skip = document.getElementById("lxBootSkip");
+  if (!boot) return;
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Only play once per browser (comment this out if you want it every time)
+  const alreadyPlayed = localStorage.getItem("lxBootPlayed") === "1";
+
+  function finishBoot() {
+    boot.classList.add("is-out");
+    document.body.classList.remove("is-booting");
+    document.body.classList.add("is-booted");
+    localStorage.setItem("lxBootPlayed", "1");
+    setTimeout(() => boot.remove(), 900);
+  }
+
+  function startBoot() {
+    document.body.classList.add("is-booting");
+
+    // If reduced motion, skip the fancy part
+    if (reduce) {
+      finishBoot();
+      return;
+    }
+
+    // Let the logo breathe a tiny bit, then reveal site
+    setTimeout(finishBoot, 1400);
+  }
+
+  // Skip button
+  skip?.addEventListener("click", finishBoot);
+  boot.addEventListener("click", (e) => {
+    // Clicking outside the button also skips (feels interactive)
+    if (e.target === boot) finishBoot();
+  });
+
+  // If already played, don't show it again
+  if (alreadyPlayed) {
+    boot.remove();
+    document.body.classList.add("is-booted");
+  } else {
+    startBoot();
+  }
+})();
