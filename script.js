@@ -89,7 +89,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
 
     // Let the logo breathe a tiny bit, then reveal site
-    setTimeout(finishBoot, 1400);
+    setTimeout(finishBoot, 3500);
   }
 
   // Skip button
