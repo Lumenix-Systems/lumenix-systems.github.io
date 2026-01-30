@@ -793,26 +793,3 @@ body.is-booted footer{
 @media (max-width: 560px){
   .gamesGrid{ grid-template-columns: 1fr; }
 }
-.sysCard {
-  position: relative;
-  overflow: hidden;
-}
-
-.sysCard__bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 0;
-}
-
-.sysCard:hover .sysCard__bg {
-  opacity: 0.35;
-}
-
-.sysCard__content {
-  position: relative;
-  z-index: 1;
-}
