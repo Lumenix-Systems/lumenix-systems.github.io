@@ -816,22 +816,3 @@ body.is-booted footer{
   position: relative;
   z-index: 1;
 }
-.pmpeAlbum {
-  margin-top: 3rem;
-}
-
-.pmpeAlbum__track {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-}
-
-.pmpeAlbum__track img {
-  height: 280px;
-  border-radius: 14px;
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  background: #f2f2f2;
-}
