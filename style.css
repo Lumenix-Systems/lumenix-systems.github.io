@@ -793,3 +793,38 @@ body.is-booted footer{
 @media (max-width: 560px){
   .gamesGrid{ grid-template-columns: 1fr; }
 }
+/* ===========================
+   PMPE card hover slideshow
+   (isolated, safe)
+=========================== */
+#PMPE { position: relative; } /* .card already has overflow hidden */
+
+#PMPE .pmpe-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  z-index: 0;
+  pointer-events: none;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+/* Soft readability overlay so text stays crisp */
+#PMPE .pmpe-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0.32));
+}
+
+/* Keep PMPE content above the backgrounds (and keep your current layout unchanged) */
+#PMPE > * { position: relative; z-index: 1; }
+
+/* Only show background while hovering PMPE */
+#PMPE:hover .pmpe-bg { opacity: 0.33; }
+
+@media (prefers-reduced-motion: reduce) {
+  #PMPE .pmpe-bg { transition: none; }
+}
