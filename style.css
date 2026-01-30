@@ -793,3 +793,35 @@ body.is-booted footer{
 @media (max-width: 560px){
   .gamesGrid{ grid-template-columns: 1fr; }
 }
+/* --- PMPE hover slideshow (safe, isolated) --- */
+#PMPE { position: relative; overflow: hidden; }
+
+#PMPE .pmpe-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* readability overlay (won’t break your existing design) */
+#PMPE .pmpe-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
+}
+
+/* keep your existing content above */
+#PMPE > * { position: relative; z-index: 1; }
+
+/* only show bg on hover */
+#PMPE:hover .pmpe-bg { opacity: 0.35; }
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  #PMPE .pmpe-bg { transition: none; }
+}
