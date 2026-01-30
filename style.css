@@ -823,7 +823,7 @@ body.is-booted footer{
 #PMPE > * { position: relative; z-index: 1; }
 
 /* Only show background while hovering PMPE */
-#PMPE:hover .pmpe-bg { opacity: 0.33; }
+#PMPE > :not(.pmpe-bg) { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   #PMPE .pmpe-bg { transition: none; }
