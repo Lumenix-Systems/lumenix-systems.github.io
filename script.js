@@ -117,9 +117,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
   // Update these paths to match your repo /images/ names
   const images = [
-    "./images/pmpe_tmhm_hero.png",
-    "./images/pmpe_tmhm_front.png",
-    "./images/pmpe_tmhm_conceptual-array.png",
+    "images/pmpe_tmhm_hero.png",
+    "images/pmpe_tmhm_front.png",
+    "images/pmpe_tmhm_conceptual-array.png",
     // later add:
     // "./images/pmpe_gm_hero.png",
     // "./images/pmpe_op_hero.png",
