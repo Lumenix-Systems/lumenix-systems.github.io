@@ -829,3 +829,32 @@ body.is-booted footer{
 @media (prefers-reduced-motion: reduce) {
   #PMPE .pmpe-bg { transition: none; }
 }
+/* PMPE background image test */
+#PMPE { position: relative; }
+
+#PMPE .pmpe-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition: opacity 500ms ease;
+  z-index:0;
+  pointer-events:none;
+}
+
+#PMPE .pmpe-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0.35));
+}
+
+#PMPE > :not(.pmpe-bg){
+  position:relative;
+  z-index:1;
+}
+
+#PMPE:hover .pmpe-bg{
+  opacity:0.35;
+}
