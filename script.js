@@ -107,32 +107,3 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     startBoot();
   }
 })();
-<script>
-const pmpeImages = [
-  "images/pmpe_tmhm_hero.png",
-  "images/pmpe_gm_hero.png",
-  "images/pmpe_op_hero.png"
-];
-
-let pmpeIndex = 0;
-let pmpeInterval = null;
-
-const pmpeCard = document.querySelector(".sysCard--pmpe");
-const pmpeBg = pmpeCard.querySelector(".sysCard__bg");
-
-pmpeCard.addEventListener("mouseenter", () => {
-  pmpeBg.style.backgroundImage = `url(${pmpeImages[pmpeIndex]})`;
-
-  pmpeInterval = setInterval(() => {
-    pmpeIndex = (pmpeIndex + 1) % pmpeImages.length;
-    pmpeBg.style.backgroundImage = `url(${pmpeImages[pmpeIndex]})`;
-  }, 1800);
-});
-
-pmpeCard.addEventListener("mouseleave", () => {
-  clearInterval(pmpeInterval);
-  pmpeInterval = null;
-  pmpeIndex = 0;
-  pmpeBg.style.opacity = "0";
-});
-</script>
