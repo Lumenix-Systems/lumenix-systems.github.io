@@ -112,7 +112,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // (isolated, safe)
 // ===========================
 (function () {
-  const card = document.getElementById("PMPE");
+  const card = document.getElementById("pmpe");
   if (!card) return;
 
   // Update these paths to match your repo /images/ names
