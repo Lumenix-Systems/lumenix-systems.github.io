@@ -107,3 +107,56 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     startBoot();
   }
 })();
+// --- PMPE hover slideshow (safe, isolated) ---
+(function () {
+  const pmpeCard = document.getElementById("PMPE");
+  if (!pmpeCard) return;
+
+  // Put your images here (paths relative to index.html)
+  const pmpeImages = [
+    "./images/pmpe_tmhm_hero.png",
+    "./images/pmpe_tmhm_front.png",
+    "./images/pmpe_tmhm_conceptual-array.png"
+    // later: "./images/pmpe_gm_hero.png", "./images/pmpe_op_hero.png", ...
+  ];
+
+  // Create background layer (only once)
+  let bg = pmpeCard.querySelector(".pmpe-bg");
+  if (!bg) {
+    bg = document.createElement("div");
+    bg.className = "pmpe-bg";
+    pmpeCard.prepend(bg);
+  }
+
+  let idx = 0;
+  let timer = null;
+
+  // helper: swap image with a subtle fade
+  function setBg(url) {
+    // quick fade out then swap then fade in
+    bg.style.opacity = "0";
+    requestAnimationFrame(() => {
+      bg.style.backgroundImage = `url("${url}")`;
+      // show only if hovered (CSS handles hover opacity)
+      if (pmpeCard.matches(":hover")) bg.style.opacity = "";
+    });
+  }
+
+  pmpeCard.addEventListener("mouseenter", () => {
+    idx = 0;
+    setBg(pmpeImages[idx]);
+
+    timer = setInterval(() => {
+      idx = (idx + 1) % pmpeImages.length;
+      setBg(pmpeImages[idx]);
+    }, 1600);
+  });
+
+  pmpeCard.addEventListener("mouseleave", () => {
+    if (timer) clearInterval(timer);
+    timer = null;
+    idx = 0;
+    // CSS hover handles visibility; ensure it's reset
+    bg.style.backgroundImage = "";
+  });
+})();
