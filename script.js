@@ -107,3 +107,93 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     startBoot();
   }
 })();
+// ===========================
+// PMPE card hover slideshow
+// (isolated, safe)
+// ===========================
+(function () {
+  const card = document.getElementById("PMPE");
+  if (!card) return;
+
+  // Update these paths to match your repo /images/ names
+  const images = [
+    "./images/pmpe_tmhm_hero.png",
+    "./images/pmpe_tmhm_front.png",
+    "./images/pmpe_tmhm_conceptual-array.png",
+    // later add:
+    // "./images/pmpe_gm_hero.png",
+    // "./images/pmpe_op_hero.png",
+    // "./images/pmpe_gm_front.png",
+    // ...
+  ];
+
+  // Create two layers for real crossfade (no layout changes)
+  let bgA = card.querySelector(".pmpe-bg.pmpe-bg--a");
+  let bgB = card.querySelector(".pmpe-bg.pmpe-bg--b");
+
+  if (!bgA) {
+    bgA = document.createElement("div");
+    bgA.className = "pmpe-bg pmpe-bg--a";
+    card.prepend(bgA);
+  }
+  if (!bgB) {
+    bgB = document.createElement("div");
+    bgB.className = "pmpe-bg pmpe-bg--b";
+    card.prepend(bgB);
+  }
+
+  // Ensure starting states
+  bgA.style.opacity = "0";
+  bgB.style.opacity = "0";
+
+  let idx = 0;
+  let timer = null;
+  let showA = true;
+
+  function setLayer(el, url) {
+    el.style.backgroundImage = `url("${url}")`;
+  }
+
+  function crossfadeTo(url) {
+    const inEl = showA ? bgA : bgB;
+    const outEl = showA ? bgB : bgA;
+
+    setLayer(inEl, url);
+
+    // Force a frame so background applies before opacity transition
+    requestAnimationFrame(() => {
+      // Let CSS hover rule handle overall visibility baseline,
+      // but we also manage per-layer to crossfade.
+      inEl.style.opacity = "0.33";
+      outEl.style.opacity = "0";
+      showA = !showA;
+    });
+  }
+
+  function start() {
+    // start at first image
+    idx = 0;
+    showA = true;
+    bgA.style.opacity = "0";
+    bgB.style.opacity = "0";
+
+    crossfadeTo(images[idx]);
+
+    // rotate while hovering
+    timer = setInterval(() => {
+      idx = (idx + 1) % images.length;
+      crossfadeTo(images[idx]);
+    }, 1800);
+  }
+
+  function stop() {
+    if (timer) clearInterval(timer);
+    timer = null;
+    bgA.style.opacity = "0";
+    bgB.style.opacity = "0";
+  }
+
+  // Only run on hover (no autoplay)
+  card.addEventListener("mouseenter", start);
+  card.addEventListener("mouseleave", stop);
+})();
